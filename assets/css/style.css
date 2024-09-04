@@ -5,3 +5,26 @@
 body {
   background-color: #000;
 }
+
+/* assets/css/main.css */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #333;
+  /* Dark gray background */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #E9FF93;
+  /* Light green scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #c3f064;
+  /* Slightly darker green on hover */
+}

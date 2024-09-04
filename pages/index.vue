@@ -3,6 +3,11 @@
     <Sidebar />
     <v-container>
       <Jumbotron />
+      <About />
+      <Skill />
+      <Projects />
+      <Cert />
+      <Footerz />
     </v-container>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
-  <v-container class="flex flex-col justify-center h-screen">
-    <div class="flex pl-28 flex-col gap-3 items-start justify-center">
+  <v-container class="flex flex-col mb-10 justify-center h-screen relative">
+    <div class="flex  flex-col gap-3 items-start justify-center">
       <div
         class="text-white font-bold leading-loose text-2xl"
         style="height: 1em; line-height: 1"
@@ -30,6 +30,16 @@
         Hi there! good to see you here. I'm a student who loves to build things.
       </p>
     </div>
+
+    <!-- Scroll Down Icon Button -->
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+      <v-btn icon @click="scrollDown" class="bounce-animation flex flex-col">
+        <div class="flex flex-col items-center">
+          <span style="font-size: 0.7em">Scroll Down</span>
+          <v-icon large class="text-white">mdi-chevron-down</v-icon>
+        </div>
+      </v-btn>
+    </div>
   </v-container>
 </template>
 
@@ -39,7 +49,7 @@ import Typed from 'typed.js'
 export default {
   mounted() {
     const options = {
-      strings: ['Student', 'Fullstack Developer', 'Designer'],
+      strings: ['Student', 'Software Engineer'],
       typeSpeed: 50,
       backSpeed: 35,
       loop: true,
@@ -47,6 +57,14 @@ export default {
     }
 
     this.typed = new Typed(this.$refs.typedElement, options)
+  },
+  methods: {
+    scrollDown() {
+      window.scrollTo({
+        top: window.innerHeight,
+        behavior: 'smooth',
+      })
+    },
   },
   beforeDestroy() {
     if (this.typed) {
@@ -71,5 +89,25 @@ export default {
   width: 0.1em; /* Optional: Adjust the cursor thickness */
   display: inline-block;
   vertical-align: bottom; /* Align cursor with the text baseline */
+}
+
+.bounce-animation {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
 }
 </style>

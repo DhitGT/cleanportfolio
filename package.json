@@ -15,6 +15,7 @@
     "@nuxtjs/axios": "^5.13.6",
     "autoprefixer": "^10.4.20",
     "core-js": "^3.25.3",
+    "dotenv": "^16.4.5",
     "nuxt": "^2.15.8",
     "postcss": "^8.4.41",
     "tailwindcss": "2.0",
