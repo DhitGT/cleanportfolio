@@ -18,9 +18,13 @@
     "nuxt": "^2.15.8",
     "postcss": "^8.4.41",
     "tailwindcss": "2.0",
+    "typed.js": "^2.1.0",
     "vue": "^2.7.10",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10",
+    "vue-typed": "^2.1.4",
+    "vue-typed-js": "^0.1.2",
+    "vue3-typed-js": "^0.0.1",
     "vuetify": "^2.6.10"
   },
   "devDependencies": {

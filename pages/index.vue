@@ -2,9 +2,7 @@
   <div class="flex justify-start">
     <Sidebar />
     <v-container>
-      <div class="bg-red-400">
-        <p>asdasd</p>
-      </div>
+      <Jumbotron />
     </v-container>
   </div>
 </template>

@@ -17,14 +17,13 @@
               <div
                 v-for="(item, index) in menuItems"
                 :key="index"
-                class="text-gray-400 flex items-center justify-center text-md"
-                style="max-height: max-content"
+                class="text-gray-400 flex items-center justify-center text-md hover:text-yellow-100 transition-colors delay-150"
               >
                 <span
-                  style="display: block; transform: rotate(270deg)"
-                  class="items-center font-bold justify-center"
-                  >{{ item }}</span
+                  class="block transform rotate-90 items-center font-bold cursor-pointer justify-center hover:text-yellow-100 transition-colors delay-150"
                 >
+                  {{ item }}
+                </span>
               </div>
             </div>
 

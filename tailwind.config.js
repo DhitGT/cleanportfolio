@@ -13,7 +13,11 @@ module.exports = {
     },
   },
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'jt-collect': ['JT Collect', 'sans-serif'],
+      },
+    },
   },
   variants: {
     extend: {},
