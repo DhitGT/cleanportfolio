@@ -21,7 +21,7 @@
           <div class="card-content">
             <p class="text-white text-2xl font-bold mb-2">{{ project.name }}</p>
             <p class="text-gray-300 mb-4">{{ project.description }}</p>
-            <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3 justify-end">
               <a
                 :href="project.github"
                 target="_blank"
@@ -79,19 +79,19 @@ export default {
     return {
       projects: [
         {
-          name: 'Project One',
+          name: 'Koppling Website',
           description:
-            'Description for Project One asdas awecwec wcewecwccwc  dasd asd asd asd sdsad',
+            'Just a ',
           github: 'https://github.com/yourusername/project-one',
           website: 'https://yourwebsite.com/project-one',
-          stack: ['Vue.js', 'Nuxt.js', 'TailwindCSS'], // Example stack
+          stack: ['Vue.js', 'Nuxt.js', 'TailwindCSS'], 
         },
         {
           name: 'Project Two',
           description: 'Description for Project Two',
           github: 'https://github.com/yourusername/project-two',
           website: 'https://yourwebsite.com/project-two',
-          stack: ['React.js', 'Next.js', 'Bootstrap'], // Example stack
+          stack: ['React.js', 'Next.js', 'Bootstrap'],
         },
         {
           name: 'Project Three',

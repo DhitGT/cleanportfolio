@@ -1,6 +1,6 @@
 <template>
   <v-container class="flex flex-col mb-10 justify-center h-screen relative">
-    <div class="flex  flex-col gap-3 items-start justify-center">
+    <div class="flex md:pl-28 flex-col gap-3 items-start justify-center">
       <div
         class="text-white font-bold leading-loose text-2xl"
         style="height: 1em; line-height: 1"
