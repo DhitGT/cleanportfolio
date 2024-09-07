@@ -11,7 +11,7 @@
         ></div>
       </div>
 
-      <!-- Projects Grid -->
+     
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
         <div
           v-for="(project, index) in projects"
@@ -84,7 +84,7 @@ export default {
             'Just a ',
           github: 'https://github.com/yourusername/project-one',
           website: 'https://yourwebsite.com/project-one',
-          stack: ['Vue.js', 'Nuxt.js', 'TailwindCSS'], 
+          stack: ['Vue.js', 'Nuxt.js', 'TailwindCSS'],
         },
         {
           name: 'Project Two',
