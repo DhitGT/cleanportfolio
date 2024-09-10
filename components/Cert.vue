@@ -112,28 +112,32 @@ export default {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
   perspective: 1000px;
-  margin: 10px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-preview {
   width: 100%;
-  height: 400px;
-  overflow: hidden;
-  object-fit: contain;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-preview img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
   transition: transform 0.3s;
 }
 
 .card-content {
   padding: 20px;
-  border-radius: 8px;
-  border: 2px solid transparent;
+  border-top: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .certificate-card:hover {
@@ -169,26 +173,7 @@ export default {
 }
 
 .modal-pdf {
-  width: 90vw;
-  height: 90vh;
-}
-
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  color: #333;
-  cursor: pointer;
-  background-color: #fff;
-  border: none;
-  border-radius: 50%;
-  padding: 5px;
-  height: 2em;
-  width: 2em;
-}
-
-.close-button:hover {
-  background-color: #f5f5f5;
+  width: 100%;
+  height: 100%;
 }
 </style>
