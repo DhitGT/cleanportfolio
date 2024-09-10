@@ -21,7 +21,7 @@
       </div>
       <div class="md:w-2/3">
         <h2 class="text-3xl font-bold mb-4">Hi, I'm Aditya Dwi Saputra</h2>
-        <p class="text-gray-300 mb-6">
+        <p class="text-gray-300 mb-6 text-justify">
           I am a Software Engineering student currently studying at
           <span class="text-gray-300"
             ><a

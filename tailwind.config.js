@@ -17,6 +17,9 @@ module.exports = {
       fontFamily: {
         'jt-collect': ['JT Collect', 'sans-serif'],
       },
+      rotate: {
+        '-90': '-90deg',
+      }
     },
   },
   variants: {

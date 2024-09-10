@@ -7,10 +7,8 @@
         </p>
         <div
           class="flex-grow border-b-2 mt-5 border-dotted border-[#e9FF93]"
-          style="border-color: #e9ff93"
         ></div>
       </div>
-
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
         <div
@@ -18,94 +16,114 @@
           :key="index"
           class="project-card"
         >
-          <div class="card-content">
-            <p class="text-white text-2xl font-bold mb-2">{{ project.name }}</p>
-            <p class="text-gray-300 mb-4">{{ project.description }}</p>
-            <div class="flex items-center gap-3 justify-end">
-              <a
-                :href="project.github"
-                target="_blank"
-                class="text-[#e9FF93] text-2xl"
-              >
-                <v-icon>mdi-github</v-icon>
-              </a>
-              <a
-                :href="project.website"
-                target="_blank"
-                class="text-[#e9FF93] text-2xl"
-              >
-                <v-icon>mdi-web</v-icon>
-              </a>
+          <div class="card-content flex flex-col justify-between h-full">
+            <div class="image-wrapper">
+              <img
+                :src="project.image"
+                alt="Project image"
+                class="w-full h-64 object-cover"
+              />
+              <div class="overlay text-center text-white">
+                <p class="mt-20">Click to Visit Website</p>
+              </div>
             </div>
-            <div class="flex gap-2 mt-4">
-              <span
-                v-for="(stack, stackIndex) in project.stack"
-                :key="stackIndex"
-                class="text-gray-300 text-sm px-2 py-1 rounded bg-gray-700"
-              >
-                {{ stack }}
-              </span>
+            <div class="flex flex-col h-[100%] my-3 justify-between">
+              <div>
+                <p class="text-white text-2xl font-bold mb-2">
+                  {{ project.name }}
+                </p>
+                <p class="text-gray-300 mb-4">{{ project.description }}</p>
+              </div>
+              <div class="mt-auto" style="margin-top: auto">
+                <div class="flex items-center gap-3 justify-end">
+                  <a
+                    :href="project.github"
+                    target="_blank"
+                    class="text-[#e9FF93] text-2xl"
+                  >
+                    <v-icon>mdi-github</v-icon>
+                  </a>
+                  <a
+                    :href="project.website"
+                    target="_blank"
+                    class="text-[#e9FF93] text-2xl"
+                  >
+                    <v-icon>mdi-web</v-icon>
+                  </a>
+                </div>
+                <div class="flex gap-2 mt-4">
+                  <span
+                    v-for="(stack, stackIndex) in project.stack"
+                    :key="stackIndex"
+                    class="text-gray-300 text-sm px-2 py-1 rounded"
+                  >
+                    {{ stack }}
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="max-w-fit">
-        <a
-          href="https://github.com/DhitGT"
-          target="_blank"
-          class="text-[#e9FF93] text-md justify-center max-w-fit rounded mx-auto my-5 font-bold"
-        >
-          <div
-            style="
-              background-color: #e9ff93;
-              color: #000;
-              max-width: fit-content;
-            "
-            class="px-4 py-2 gap-3 mx-auto rounded-md my-20 flex items-center"
-          >
-            <span>View More</span>
-            <v-icon color="#000">mdi-github</v-icon>
+      <div class="flex items-center justify-center my-16">
+        <v-btn href="https://github.com/DhitGT" target="_blank" color="#e9FF93">
+          <div class="flex mx-auto items-center justify-center gap-2">
+            <span class="text-black">View More</span>
+            <v-icon color="black">mdi-github</v-icon>
           </div>
-        </a>
+        </v-btn>
       </div>
     </div>
   </div>
 </template>
 
-
-<script >
+<script>
 export default {
   data() {
     return {
       projects: [
         {
           name: 'Koppling Website',
-          description: 'Just a ',
-          github: 'https://github.com/yourusername/project-one',
-          website: 'https://yourwebsite.com/project-one',
-          stack: ['Vue.js', 'Nuxt.js', 'TailwindCSS'],
+          description:
+            'Koppling (Komunitas Pelajar Pecinta Lingkungan) is an extracurricular group at SMK Negeri 2 Kota Bekasi dedicated to fostering environmental awareness and inspiring student-led conservation actions',
+          github: 'https://github.com/DhitGT/koppling',
+          website: 'https://koppling.site',
+          image: '/koppling-website.PNG', // Use actual image path or URL
+          stack: ['Vue.js', 'Nuxt.js', 'TailwindCSS', 'Vuetify', 'Firebase'],
         },
         {
-          name: 'Project Two',
-          description: 'Description for Project Two',
-          github: 'https://github.com/yourusername/project-two',
-          website: 'https://yourwebsite.com/project-two',
-          stack: ['React.js', 'Next.js', 'Bootstrap'],
+          name: 'Sambal Ika Website',
+          description:
+            'A personal business website for Sambal Pecel by Mbak Ika, showcasing a variety of sambal products with a clean and user-friendly design.',
+          github: 'https://github.com/DhitGT/sambal-mbak-ika',
+          website: 'https://sambal.ikaa.shop/',
+          image: 'sambal-ika-website.PNG',
+          stack: ['Vue.js', 'Nuxt.js', 'TailwindCSS', 'Vuetify'],
         },
         {
-          name: 'Project Three',
-          description: 'Description for Project Three',
-          github: 'https://github.com/yourusername/project-three',
-          website: 'https://yourwebsite.com/project-three',
-          stack: ['Laravel', 'MySQL', 'CSS'], // Example stack
+          name: 'Ritsu Clothing',
+          description:
+            'Explore our exclusive collection and personalize your look with custom apparel designs. From trendy graphic tees to one-of-a-kind clothing tailored to your taste, Ritsu offers the perfect blend of style and individuality.',
+          github: 'https://github.com/DhitGT/ritsu',
+          website: 'https://ritsu.dheep.site',
+          image: 'ritsu-website.PNG',
+          stack: ['HTML', 'CSS', 'TailwindCSS'],
         },
-        // Add more projects as needed
+        {
+          name: 'Uncolonized Game',
+          description:
+            'Dive into Uncolonized Game and conquer challenging levels inspired by Indonesia’s fight for freedom. Celebrate the spirit of liberation and test your skills as you journey through this historic adventure.',
+          github: 'https://github.com/DhitGT/1945',
+          website: 'https://dhitgt.github.io/1945/index.html',
+          image: 'uncolonized-game.PNG',
+          stack: ['HTML', 'Javascript', 'Bootstrap'],
+        },
       ],
     }
   },
-  methods: {},
 }
 </script>
+
 <style scoped>
 .project-card {
   perspective: 1000px;
@@ -123,10 +141,31 @@ export default {
   border: 2px solid transparent;
 }
 
+.image-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-wrapper:hover .overlay {
+  opacity: 1;
+}
+
 .project-card:hover {
   border-color: #e9ff93;
-  transition: 0.4s all;
-
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 </style>

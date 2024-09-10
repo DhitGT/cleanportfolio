@@ -17,8 +17,9 @@
           v-for="(certificate, index) in certificates"
           :key="index"
           class="certificate-card"
-          @click="openModal(certificate.preview)"
+          @click="openModal(certificate.pdf)"
         >
+          <!-- Image Preview as PDF Cover -->
           <div class="card-preview">
             <img :src="certificate.preview" alt="Certificate Preview" />
           </div>
@@ -40,13 +41,15 @@
         </div>
       </div>
 
-      <!-- Modal -->
-      <div v-if="showModal" class="modal" @click="closeModal">
+      <!-- Modal for Full PDF View -->
+      <div v-if="showModal" class="modal bg-red-300 pa-3" @click="closeModal">
         <div class="modal-content" @click.stop>
-          <v-btn icon class="close-button" @click="closeModal">
-            <v-icon color="#000">mdi-close</v-icon></v-btn
-          >
-          <img :src="modalImage" class="modal-image" alt="Full Certificate" />
+          <iframe
+            :src="modalPdf"
+            class="modal-pdf"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
     </div>
@@ -59,31 +62,43 @@ export default {
     return {
       certificates: [
         {
-          name: 'Certificate One',
-          description: 'Description for Certificate One.',
-          link: 'https://example.com/certificate-one',
-          preview: 'https://via.placeholder.com/300x200?text=Certificate+One',
+          name: 'Traspac Intern',
+          description:
+            'Internship certificate from PT Traspac Makmur Sejahtera as a developer for 6 months.',
+          link: 'sert-traspac.pdf',
+          preview: 'sert-traspac-prev.PNG', // Image preview of PDF
+          pdf: 'sert-traspac.pdf', // Full PDF file
         },
         {
-          name: 'Certificate Two',
-          description: 'Description for Certificate Two.',
-          link: 'https://example.com/certificate-two',
-          preview: 'https://via.placeholder.com/700x400?text=Certificate+Two',
+          name: 'SMK Coding Liga SMK',
+          description:
+            'Certificate of participation in the SMK Coding League competition organized by SMK Coding.',
+          link: 'sert-smkcoding.pdf',
+          preview: 'sert-smkcoding-prev.PNG', // Image preview of PDF
+          pdf: 'sert-smkcoding.pdf', // Full PDF file
+        },
+        {
+          name: 'SMK Coding Fullstack .NET Dev',
+          description:
+            'Certificate of participation in the .NET Fullstack training for high school level organized by SMK Coding.',
+          link: 'sert-smkcoding2.pdf',
+          preview: 'sert-smkcoding2-prev.PNG', // Image preview of PDF
+          pdf: 'sert-smkcoding2.pdf', // Full PDF file
         },
         // Add more certificates as needed
       ],
       showModal: false,
-      modalImage: '',
+      modalPdf: '',
     }
   },
   methods: {
-    openModal(imageSrc) {
-      this.modalImage = imageSrc
+    openModal(pdfSrc) {
+      this.modalPdf = pdfSrc
       this.showModal = true
     },
     closeModal() {
       this.showModal = false
-      this.modalImage = ''
+      this.modalPdf = ''
     },
   },
 }
@@ -98,13 +113,14 @@ export default {
   transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
   perspective: 1000px;
   margin: 10px;
-  overflow: hidden; /* Ensure content doesn't overflow */
+  overflow: hidden;
 }
 
 .card-preview {
   width: 100%;
-  height: 200px; /* Adjust based on your image size */
+  height: 400px;
   overflow: hidden;
+  object-fit: contain;
 }
 
 .card-preview img {
@@ -133,10 +149,11 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
+  padding: 5rem;
   align-items: center;
   justify-content: center;
   z-index: 1000;
@@ -144,16 +161,16 @@ export default {
 
 .modal-content {
   position: relative;
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 90vw;
+  max-height: 90vh;
   background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
 }
 
-.modal-image {
-  width: 100%;
-  height: auto;
+.modal-pdf {
+  width: 90vw;
+  height: 90vh;
 }
 
 .close-button {

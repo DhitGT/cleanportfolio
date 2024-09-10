@@ -9,11 +9,7 @@
           >
             <div class="mb-8 flex py-4 h-full flex-col items-center">
               <a href="/" class="text-white font-bold text-2xl mb-8">
-                <v-img
-                  src="https://placehold.co/200"
-                  max-width="40"
-                  max-height="40"
-                />
+                <v-img src="dheepLogo.jpg" max-width="50" max-height="50" />
               </a>
               <div class="flex flex-col justify-between items-center mb-16">
                 <div
@@ -22,7 +18,8 @@
                   class="text-gray-400 flex items-center justify-center text-md hover:text-yellow-100 transition-colors delay-150"
                 >
                   <span
-                    class="block transform rotate-90 items-center font-bold cursor-pointer justify-center hover:text-yellow-100 transition-colors delay-150"
+                    style="transform: rotate(-90deg)"
+                    class="block transform rotate-[-90deg] items-center font-bold cursor-pointer justify-center hover:text-yellow-100 transition-colors delay-150"
                   >
                     {{ item }}
                   </span>
@@ -34,14 +31,14 @@
                 style="max-height: 6em"
               >
                 <a
-                  href="https://github.com/ardptr"
+                  href="https://github.com/DhitGT"
                   target="_blank"
                   class="text-gray-400 my-2 max-height-fit"
                 >
                   <v-icon>mdi-github</v-icon>
                 </a>
                 <a
-                  href="https://www.instagram.com/ardptr/"
+                  href="https://www.instagram.com/d.dheepy/"
                   target="_blank"
                   class="text-gray-400 my-2 max-height-fit"
                 >
