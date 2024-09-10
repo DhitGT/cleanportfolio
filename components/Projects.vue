@@ -16,7 +16,9 @@
           :key="index"
           class="project-card"
         >
-          <div class="card-content flex flex-col justify-between h-full">
+          <div
+            class="card-content md:p-3 p-2 flex flex-col justify-between h-full"
+          >
             <div class="image-wrapper">
               <img
                 :src="project.image"
@@ -51,7 +53,7 @@
                     <v-icon>mdi-web</v-icon>
                   </a>
                 </div>
-                <div class="flex gap-2 mt-4">
+                <div class="flex gap-2 mt-4 flex-wrap">
                   <span
                     v-for="(stack, stackIndex) in project.stack"
                     :key="stackIndex"
@@ -136,7 +138,6 @@ export default {
 }
 
 .card-content {
-  padding: 20px;
   border-radius: 8px;
   border: 2px solid transparent;
 }

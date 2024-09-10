@@ -28,3 +28,17 @@ body {
   background: #c3f064;
   /* Slightly darker green on hover */
 }
+
+@media (min-width: 768px) {
+  .typed-cursor {
+    font-size: 6em;
+    /* Font size for medium screens and above */
+  }
+}
+
+@media (max-width: 767px) {
+  .typed-cursor {
+    font-size: 2em;
+    /* Font size for small screens */
+  }
+}

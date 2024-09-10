@@ -12,7 +12,7 @@
       <div>
         <div class="flex flex-wrap" style="height: max-content">
           <div
-            class="mr-3 text-8xl"
+            class="mr-3 text-5xl md:text-8xl"
             style="font-weight: bold; line-height: 1em; height: fit-content"
           >
             I'm
@@ -20,7 +20,7 @@
 
           <span
             ref="typedElement"
-            class="text-8xl text-[#e9FF93]"
+            class="text-5xl md:text-8xl text-[#e9FF93]"
             style="color: #e9ff93; font-weight: bold; height: fit-content"
           >
           </span>
@@ -93,6 +93,18 @@ export default {
 
 .bounce-animation {
   animation: bounce 2s infinite;
+}
+
+@media (min-width: 768px) {
+  .typed-cursor {
+    font-size: 6em; /* Font size for medium screens and above */
+  }
+}
+
+@media (max-width: 767px) {
+  .typed-cursor {
+    font-size: 3.5em; /* Font size for small screens */
+  }
 }
 
 @keyframes bounce {
