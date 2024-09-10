@@ -16,6 +16,7 @@
                   v-for="(item, index) in menuItems"
                   :key="index"
                   class="text-gray-400 flex items-center justify-center text-md hover:text-yellow-100 transition-colors delay-150"
+                  @click="scrollToSection(item)"
                 >
                   <span
                     style="transform: rotate(-90deg)"
@@ -55,15 +56,17 @@
     <v-app-bar app dark v-if="$vuetify.breakpoint.mdAndDown">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-navigation-drawer v-model="drawer" app temporary>
-        <v-list>
-          <v-list-item
+        <div class="flex flex-col p-4 gap-3 justify-start">
+          <div
             v-for="(item, index) in menuItems"
-            :key="index"
-            :to="`/${item.toLowerCase()}`"
+            :key="'mbs' + index"
+            class="cursor-pointer"
+            style="z-index: 200"
+            @click="scrollToSection(item)"
           >
-            <v-list-item-content>{{ item }}</v-list-item-content>
-          </v-list-item>
-        </v-list>
+            {{ item }}
+          </div>
+        </div>
       </v-navigation-drawer>
     </v-app-bar>
   </div>
@@ -76,6 +79,16 @@ export default {
       menuItems: ['Home', 'Skills', 'Projects', 'Cert'],
       drawer: false,
     }
+  },
+
+  methods: {
+    scrollToSection(sectionId) {
+      // Scroll to the element with the ID corresponding to the section
+      const sectionElement = document.getElementById(sectionId)
+      if (sectionElement) {
+        sectionElement.scrollIntoView({ behavior: 'smooth' })
+      }
+    },
   },
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <v-app dark class="gradient-background">
+  <v-app dark class="angled-gradient-background">
     <v-main>
       <Nuxt />
     </v-main>
@@ -13,17 +13,17 @@ export default {
 </script>
 
 <style scoped>
-.gradient-background {
+.angled-gradient-background {
   background: linear-gradient(
     300deg,
-    #000000,
-    #000000,
-    #303030,
-    #000000,
-    #000000
+    /* Gradient angle */ black 0%,
+    black 48%,
+    #f2ffbc23 50%,
+    /* Sharp white line at 300 degrees */ black 52%,
+    black 100%
   );
   background-size: 300% 300%;
-  animation: gradient-animation 30s ease infinite;
+  animation: gradient-animation 20s ease infinite;
 }
 
 @keyframes gradient-animation {
