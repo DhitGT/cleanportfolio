@@ -45,7 +45,7 @@
         <div class="text-gray-300 flex items-center justify-start gap-5">
           <div>
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:dheep.co@gmail.com"
               class="flex items-center text-[#e9FF93]"
             >
               <v-icon>mdi-email</v-icon>
@@ -53,7 +53,7 @@
           </div>
           <div>
             <a
-              href="https://www.linkedin.com/in/your-profile"
+              href="https://www.linkedin.com/in/aditya-dwi-saputra-12018628b/"
               target="_blank"
               class="flex items-center text-[#e9FF93]"
             >
