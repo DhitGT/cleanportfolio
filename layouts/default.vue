@@ -19,7 +19,7 @@ export default {
     /* Gradient angle */ black 0%,
     black 48%,
     #f2ffbc23 50%,
-    /* Sharp white line at 300 degrees */ black 52%,
+
     black 100%
   );
   background-size: 300% 300%;
