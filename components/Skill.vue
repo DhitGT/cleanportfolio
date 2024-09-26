@@ -11,7 +11,6 @@
         ></div>
       </div>
 
-      <!-- Loop through each skill category -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
         <div
           v-for="(category, index) in skillCategories"
