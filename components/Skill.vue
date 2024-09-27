@@ -21,7 +21,7 @@
             {{ category.name }}
           </p>
           <div class="flex gap-3 flex-wrap">
-            <!-- Loop through each skill in the category -->
+            
             <p
               v-for="(skill, skillIndex) in category.skills"
               :key="skillIndex"
