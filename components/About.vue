@@ -59,6 +59,24 @@
               <v-icon>mdi-linkedin</v-icon>
             </a>
           </div>
+          <div>
+            <a
+              href="https://github.com/DhitGT"
+              target="_blank"
+              class="text-gray-400 my-2 max-height-fit"
+            >
+              <v-icon>mdi-github</v-icon>
+            </a>
+          </div>
+          <div>
+            <a
+              href="https://www.instagram.com/d.dheepy/"
+              target="_blank"
+              class="text-gray-400 my-2 max-height-fit"
+            >
+              <v-icon>mdi-instagram</v-icon>
+            </a>
+          </div>
         </div>
       </div>
     </div>
