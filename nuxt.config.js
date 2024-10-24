@@ -11,6 +11,9 @@ export default {
     htmlAttrs: {
       lang: 'en',
     },
+    script: [
+      { src: 'https://unpkg.com/aos@next/dist/aos.js', body: true }
+    ],
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -20,7 +23,13 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/dheepLogo.ico' }, {
       rel: 'stylesheet',
       href: 'https://fonts.googleapis.com/css2?family=JT+Collect:wght@400;700&display=swap'
-    }],
+    }, { rel: 'stylesheet', href: 'https://unpkg.com/aos@next/dist/aos.css' }],
+  },
+
+  mounted() {
+    if (process.client) {
+      require('aos').init();
+    }
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

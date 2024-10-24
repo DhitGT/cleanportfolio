@@ -10,7 +10,6 @@
       </div>
     </div>
 
-  
     <div class="flex flex-col md:flex-row items-center gap-10">
       <div class="md:w-1/3">
         <img
