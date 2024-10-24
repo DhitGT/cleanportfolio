@@ -63,7 +63,7 @@
             <a
               href="https://github.com/DhitGT"
               target="_blank"
-              class="text-gray-400 my-2 max-height-fit"
+              class="flex items-center text-[#e9FF93]"
             >
               <v-icon>mdi-github</v-icon>
             </a>
@@ -72,7 +72,7 @@
             <a
               href="https://www.instagram.com/d.dheepy/"
               target="_blank"
-              class="text-gray-400 my-2 max-height-fit"
+              class="flex items-center text-[#e9FF93]"
             >
               <v-icon>mdi-instagram</v-icon>
             </a>
