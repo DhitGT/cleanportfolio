@@ -26,7 +26,9 @@
                 class="w-full h-64 object-cover"
               />
               <div class="overlay text-center text-white">
-                <p class="mt-20">Click to Visit Website</p>
+                <p class="mt-20" @click="visitWebsite(project)">
+                  Click to Visit Website
+                </p>
               </div>
             </div>
             <div class="flex flex-col h-[100%] my-3 justify-between">
@@ -122,6 +124,11 @@ export default {
         },
       ],
     }
+  },
+  methods: {
+    visitWebsite(project) {
+      window.locaion.href = project.website
+    },
   },
 }
 </script>
