@@ -26,7 +26,10 @@
                 class="w-full h-64 object-cover"
               />
               <div class="overlay text-center text-white">
-                <p class="mt-20" @click="visitWebsite(project)">
+                <p
+                  class="mt-20 cursor-pointer pointer"
+                  @click="visitWebsite(project)"
+                >
                   Click to Visit Website
                 </p>
               </div>
