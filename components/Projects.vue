@@ -130,7 +130,7 @@ export default {
   },
   methods: {
     visitWebsite(project) {
-      window.locaion.href = project.website
+      window.location.href = project.website
     },
   },
 }
