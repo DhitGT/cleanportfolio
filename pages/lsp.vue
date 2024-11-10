@@ -69,7 +69,7 @@
       <code-block :code="table_barangMouseClicked" />
     </div>
     <hr />
-    <h2 class="font-bold text-3xl py-3">REGERENSI IDE LAIN (BEDA PROJEK)</h2>
+    <h2 class="font-bold text-3xl py-3">REFERENSI IDE LAIN (BEDA PROJEK)</h2>
     <div class="card">
       <p>Search</p>
       <code-block :code="search" />
