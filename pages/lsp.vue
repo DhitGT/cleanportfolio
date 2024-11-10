@@ -1,6 +1,14 @@
 <template>
   <div class="container">
     <hr />
+    <h2 class="font-bold text-3xl pt-3">LINK BAHAN BAHAN</h2>
+    <div class="card pb-2">
+      <a
+        href="https://drive.google.com/drive/folders/12MXl9DgBeDF9YIrHqrWpJ4wsh6D0GSCL"
+        >LINK BAHAN BAHAN</a
+      >
+    </div>
+    <hr />
     <h2 class="font-bold text-3xl py-3">KONEKSI</h2>
     <div class="card">
       <p>Skrip Koneksi</p>
