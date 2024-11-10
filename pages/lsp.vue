@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <v-container class="container">
     <hr />
     <h2 class="font-bold text-3xl pt-3">LINK BAHAN BAHAN</h2>
     <div class="card pb-2">
@@ -74,7 +74,7 @@
       <p>Search</p>
       <code-block :code="search" />
     </div>
-  </div>
+  </v-container>
 </template>
 
 <script>
